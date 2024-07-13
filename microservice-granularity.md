@@ -13,4 +13,6 @@ The other challenge that teams always come across is that, does it requires one 
 
 Let us take an example to deep-dive into this.
 
+Let us take an example of a bank account. 
+
 Here are some key considerations and guidelines to help you achieve the right granularity:
