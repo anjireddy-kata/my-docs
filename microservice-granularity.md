@@ -30,4 +30,19 @@ Here are some key considerations and guidelines to help you achieve the right gr
 **Bounded Context:** Use bounded contexts from DDD to define clear boundaries within your domain. Ensure each microservice operates within its own bounded context.
 Each microservice should represent a single business capability. 
 
-**Single Responsibility Principle**: The functionality offered by a microservice should be Single Purpose and Highly Cohesive. Ensure each microservice has a single, well-defined responsibility. Avoid combining multiple unrelated responsibilities into a single service. 
+**Single Responsibility Principle**: The functionality offered by a microservice should be Single Purpose and Highly Cohesive. Ensure each microservice has a single, well-defined responsibility. Avoid combining multiple responsibilities into a single service.
+
+**Service-to-Service Communication**: Minimize the number of interactions and dependencies between microservices. Excessive communication can indicate that services are too granular and should be combined. 
+
+**Scalability, Performance, and Load**: Identify components that need to scale independently.Services that require different scaling characteristics should be separated.
+Consider the impact of network latency and inter-service communication on performance. Ensure that splitting services does not introduce significant performance bottlenecks.
+Ensure that the load can be evenly distributed across services. Services with disproportionate load can indicate improper granularity.
+
+**Team Autonomy**: Align microservices with the structure of your development teams. Ensure that a team can fully own and manage a microservice without excessive dependencies on other teams.
+
+**Data Ownership and Management**: Each microservice should own its data. Avoid shared databases across microservices to maintain loose coupling and independent scalability.
+If two services frequently need the same data, reconsider the boundaries to optimize data flow.
+
+**Technical Constraints and Complexity**: Avoid making services too small, which can lead to excessive complexity in managing inter-service communication and dependencies.
+Strike a balance between simplicity and maintainability. Consider technology constraints and the feasibility of managing multiple microservices.
+Use tools and platforms that support your microservice architecture effectively.
