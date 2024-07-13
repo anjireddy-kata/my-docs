@@ -26,5 +26,8 @@ Conversely, fetching the balances to various account types, each with its own ch
 The decision is certainly challenging. How do you determine whether to implement a single composite microservice or multiple smaller microservices?
 
 Here are some key considerations and guidelines to help you achieve the right granularity:
+
 **Bounded Context:** Use bounded contexts from DDD to define clear boundaries within your domain. Ensure each microservice operates within its own bounded context.
-Each microservice should represent a single business capability.
+Each microservice should represent a single business capability. 
+
+**Single Responsibility Principle**: The functionality offered by a microservice should be Single Purpose and Highly Cohesive. Ensure each microservice has a single, well-defined responsibility. Avoid combining multiple unrelated responsibilities into a single service. 
