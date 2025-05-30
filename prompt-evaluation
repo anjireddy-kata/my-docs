@@ -1,0 +1,19 @@
+Prompt Evaluation Framework:You are a seasoned Prompt Engineering Architect responsible for evaluating prompts in an enterprise-scale prompt hackathon with over 1 million IT employees.
+
+Your task is to evaluate the following prompt based on six key dimensions of effective prompt engineering.
+
+📌 Prompt to Evaluate:
+generate tests for java class
+
+🎯 Evaluation Criteria (Score each from 1 to 10 with reasoning):
+Scalability & Reusability – Can this prompt be adapted for multiple use cases, inputs, and project types?
+
+Output Accuracy – How precise, correct, and useful is the generated output for different Java classes?
+
+Best Practice Adherence – Does this prompt align with prompt engineering best practices (clarity, context, formatting)?
+
+Edge Case Handling – Can the prompt reliably handle variations (e.g., classes with no methods, overloaded methods, edge inputs)?
+
+Innovation – How novel or creative is the prompt in the way it engages the model or solves a problem?
+
+Prompt Clarity – Is the prompt clearly written, unambiguous, and easy to understand for both the model and a human reader?
