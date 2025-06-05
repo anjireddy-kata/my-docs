@@ -35,3 +35,216 @@ Interactive segments (quizzes, role-play scenarios)
 Prepares the audience to confidently participate in discussions, design reviews, or projects related to contact center technology or operations.
 
 Structure the content logically—from foundational concepts to more advanced topics—and ensure clarity, simplicity, and audience engagement throughout.
+
+Q1: What does ACD stand for in a contact center context?
+a) Automated Call Dialer
+b) Advanced Call Distribution
+c) Automatic Call Distributor
+d) Assisted Communication Device
+
+Q2: An IVR system allows customers to interact with a contact center using keypad or voice inputs.
+True
+False
+Q3: Which component connects the telephony system with the agent’s desktop application to show caller info and enable call control?
+a) CRM
+b) CTI
+c) SIP
+d) WFM
+
+Q4: What is the primary goal of omnichannel support in a contact center?
+a) Reduce the number of channels used
+b) Provide consistent customer service across all communication channels
+c) Focus only on voice calls
+d) Train agents to work on one channel only
+
+Q5: Name two channels, apart from voice, that are typically supported in an omnichannel contact center.
+Answer (examples): Chat, email, SMS, social media, mobile app, etc.
+Q6: Agents typically handle only one customer at a time, regardless of the channel.
+True/False
+Q7: Which of the following is NOT typically a function of Workforce Management (WFM)?
+a) Agent scheduling
+b) Call transcription
+c) Forecasting call volume
+d) Tracking agent adherence
+
+Q8: Which metric best indicates whether customer issues are resolved on the first interaction?
+a) CSAT
+b) AHT
+c) FCR
+d) NPS
+
+Q9: Reporting and analytics are only used by senior management in contact centers.
+True/False
+Q10: Which of the following KPIs is used to measure customer satisfaction?
+a) AHT (Average Handle Time)
+b) CSAT (Customer Satisfaction Score)
+c) ASA (Average Speed of Answer)
+d) ACW (After Call Work)
+
+Q11: Which contact center tool allows a customer to resolve their query without speaking to an agent?
+a) CTI
+b) ACD
+c) IVR
+d) WFM
+
+Q12: If a customer starts on chat, switches to voice, and then receives a follow-up email—what capability enables this seamless experience?
+
+Q13: What might happen if a contact center lacks proper call routing logic?
+a) Customers are always routed to the best agent
+b) Calls are answered faster
+c) Customers may be misrouted or wait longer
+d) Agents won’t be affected
+
+Q14: Name one benefit of having quality monitoring and feedback loops in a contact center.
+
+Answer example: Helps improve agent performance, ensures consistency, increases customer satisfaction, identifies training needs, etc.
+
+Pre-Session Questions (Before Knowledge Sharing)
+What is the first thing that typically happens when you call a customer support number?
+a) Talk to an agent
+b) Enter an IVR menu
+c) Get disconnected
+d) Hear hold music
+
+True or False:
+All customer service interactions today happen only over phone calls.
+
+Which of these is most likely used to manage customer information during a call?
+a) MS Excel
+b) CRM
+c) ACD
+d) IVR
+
+What is the purpose of an IVR system in customer service?
+a) To reduce staff
+b) To help route calls or offer self-service
+c) To play ads
+d) To collect passwords
+
+Have you heard the term ‘CTI’ before?
+a) Yes, and I know what it is
+b) Yes, but I’m not sure what it does
+c) No
+
+If you’re kept on hold for 10 minutes, what would you expect the company to do? (Open-ended)
+
+Which of these roles do you associate with a contact center?
+a) Agent
+b) Supervisor
+c) Data Analyst
+d) All of the above
+
+True or False:
+Contact centers are only relevant to telecom and banking companies.
+
+Which channel do you personally prefer when contacting customer support?
+a) Phone
+b) Chat
+c) Email
+d) Social media
+
+What does “first contact resolution” mean in your understanding? (Open-ended)
+
+Which tool might a team leader use to schedule shifts in a contact center?
+a) Calendar
+b) WFM tool
+c) IVR
+d) CTI
+
+How would you define "agent experience"?
+a) How long the agent has worked
+b) How easy and supported the agent feels during their work
+c) The number of calls handled
+d) Agent’s personal satisfaction score
+
+What do you think happens behind the scenes once a call is missed or dropped? (Open-ended)
+
+True or False:
+Contact center systems can automatically analyze customer emotions.
+
+What word best describes how you currently feel about your knowledge of contact centers?
+(Open-ended: e.g., Curious, Unsure, Experienced, Beginner, Confused)
+
+🎯 Post-Session Quiz: Reinforce and Validate Learning
+(Focus: Concept application, key terms, real-world understanding)
+
+Post-Session Questions (After Knowledge Sharing)
+What does ACD stand for?
+a) Auto Customer Dashboard
+b) Agent Call Dispatcher
+c) Automatic Call Distributor
+d) Advanced Caller Data
+
+What is the main role of a CTI system?
+a) Manage workforce shifts
+b) Transcribe calls
+c) Show caller data and control calls from the agent desktop
+d) Predict call volume
+
+Which feature helps an agent see past interactions when handling a new customer query?
+a) Quality Monitoring
+b) CRM Integration
+c) ACD
+d) SIP Server
+
+True or False:
+IVR systems can help reduce call volumes by offering self-service options.
+
+What does omnichannel support mean in a contact center context?
+a) Customers can talk to multiple agents
+b) Agents can switch roles
+c) Customers can reach support across different platforms seamlessly
+d) All agents handle only emails
+
+Match the term with its function:
+
+ACD →
+
+WFM →
+
+CTI →
+
+QA →
+Options: Forecasting/scheduling, call routing, quality review, telephony integration
+
+What is the typical first touchpoint when a customer calls a support line?
+a) Agent
+b) CTI
+c) IVR
+d) CRM
+
+Which of the following metrics is most relevant for measuring agent productivity?
+a) CSAT
+b) AHT
+c) FCR
+d) NPS
+
+Short Answer:
+List two benefits of quality monitoring in a contact center.
+
+True or False:
+Agents may be trained to handle multiple channels like chat, email, and voice.
+
+A contact center team wants to reduce abandoned calls. What system or approach should they focus on improving?
+a) CTI
+b) Call routing and wait time management
+c) Email reply speed
+d) Voice recognition
+
+What does WFM software typically handle? (Choose two)
+a) Routing incoming calls
+b) Scheduling agent shifts
+c) Forecasting interaction volumes
+d) Analyzing call sentiment
+
+Post-call surveys are most commonly used to measure:
+a) Agent workload
+b) Customer satisfaction
+c) Call duration
+d) System uptime
+
+In your own words, describe the relationship between call routing and customer satisfaction. (Open-ended)
+
+How confident do you now feel about participating in a contact center-related design or operations discussion?
+(Scale or open-ended)
+
