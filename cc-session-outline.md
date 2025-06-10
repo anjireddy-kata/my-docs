@@ -379,3 +379,129 @@ The carrier routes it to the business’s contact center over SIP trunks or PSTN
 
 The carrier may perform TFN translation, load balancing, or failover routing.
 
+In the context of telephony, a Session Border Controller (SBC) is a specialized network device that manages and secures SIP-based voice and video communications between different networks—most commonly between a telecom carrier and an enterprise (like a contact center).
+
+📌 Simple Definition:
+An SBC acts like a smart firewall for VoIP calls, protecting and managing voice traffic as it crosses network boundaries.
+
+![image](https://github.com/user-attachments/assets/846dca75-fc08-4f11-a7fd-80cbe8e9fd3e)
+
+What is PSTN?
+PSTN (Public Switched Telephone Network) is the traditional, circuit-switched network used for landline telephone calls.
+
+✅ Key Points:
+Analog/digital voice network used globally for decades.
+
+Relies on TDM (Time Division Multiplexing) and SS7 signaling.
+
+Very reliable, but not IP-based.
+
+Commonly used for:
+
+Landline phones
+
+Toll-free numbers
+
+Emergency numbers (like 911)
+
+An SBC (Session Border Controller) is a smart, secure gateway that controls VoIP (Voice over IP) traffic—especially SIP calls—at the boundary between networks (e.g., between a telecom carrier and a contact center).
+
+✅ Key Points:
+Works with SIP/RTP, not TDM.
+
+Ensures security, interoperability, and quality for IP voice/video traffic.
+
+Used in modern, IP-based telephony systems like:
+
+VoIP phone systems
+
+SIP trunking
+
+Cloud contact centers
+
+🧠 Think of SBC as:
+A border control checkpoint for internet-based phone calls—it checks, secures, and manages every "traveler" (call session) crossing into your network.
+
+How PSTN and SBC Work Together
+In modern systems, many calls start on the PSTN (especially toll-free or mobile calls) but end in an IP-based system like a contact center.
+
+🧱 Call Flow Example:
+text
+Copy
+Edit
+Customer dials a TFN ➝ PSTN routes the call ➝ Carrier converts it to SIP ➝ SBC ➝ IVR ➝ Agent
+Call enters via PSTN
+
+Carrier receives the call via traditional network.
+
+Carrier converts TDM to SIP
+
+If the contact center is IP-based, the call is converted into SIP format.
+
+SBC receives SIP call
+
+Validates and secures the call before passing it into the enterprise network.
+
+What is PSTN?
+PSTN (Public Switched Telephone Network) is the traditional telephone network—the global infrastructure of landlines, cell towers, fiber optics, and switches that carry voice calls.
+
+Uses circuit-switched technology.
+
+Supports mobile and landline calls.
+
+Still the default backbone for regular phone calls worldwide.
+
+Protocols: SS7, ISUP, TDM (for voice).
+
+What is a SIP Trunk?
+A SIP Trunk is the modern, IP-based replacement for traditional telephone lines, using the SIP (Session Initiation Protocol) to carry voice calls over the internet.
+
+Used by contact centers, IP-PBXs, and VoIP systems.
+
+Delivers voice via SIP + RTP (media).
+
+Highly scalable and cost-effective.
+
+Terminates on an SBC (Session Border Controller) or VoIP gateway.
+
+nd-to-End Flow: Sofia Calls the Bank's TFN
+Let’s say Sofia dials a bank’s TFN (1800-111-2222) from her mobile phone:
+
+🧭 Step-by-Step Flow
+📱 Sofia (Mobile Phone)
+
+Dials the TFN from her mobile.
+
+📡 Mobile Network → PSTN
+
+Her call goes through her Mobile Network Operator (MNO), which routes the call into the PSTN.
+
+🗺 TFN Database Lookup
+
+The PSTN consults a TFN database (Intelligent Network - IN) to determine where the TFN should be routed (e.g., which SIP endpoint or number).
+
+🚪 PSTN → SIP Trunk
+
+The call is converted to SIP by the carrier (if the contact center is IP-based).
+
+Now the voice call travels over a SIP trunk from the carrier to the bank's SBC.
+
+🛡 SBC (Session Border Controller)
+
+The SBC receives the SIP call, performs security checks, normalization, and routes it internally.
+
+🎛 Voice Platform / IVR
+
+The call is sent to the IVR to gather inputs (e.g., account number, intent).
+
+👩‍💼 ACD → Agent Desktop
+
+The call is routed using ACD logic (based on skills, availability, etc.).
+
+The agent picks up the call, and media flows directly between Sofia and the agent.
+
+![image](https://github.com/user-attachments/assets/2a660e88-8607-4f60-8aaf-c8a137a922b7)
+
+![image](https://github.com/user-attachments/assets/6e45fc12-61d3-42f8-b490-cd8c06c481ef)
+
+
