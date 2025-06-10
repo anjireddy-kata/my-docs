@@ -138,4 +138,14 @@ Network: Her call enters the Public Switched Telephone Network (PSTN) or VoIP ne
 ##### SS7 (Signaling System 7) – PSTN signaling
 ##### SIP (Session Initiation Protocol) – for VoIP-based calls
 
+#### Carrier-Level Routing
+The carrier (e.g., Airtel, AT&T) resolves the destination number (e.g., bank's toll-free or DID number).
+
+If it’s a toll-free number (e.g., 1800):
+It's resolved via Intelligent Network (IN) services.
+The call is routed to the enterprise’s telephony ingress point.
+
+Key Components:
+- Toll-Free Routing Database
+- Carrier Gateway (e.g., SIP trunking, PRI)
 
