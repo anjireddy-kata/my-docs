@@ -6,12 +6,12 @@ Analogy: Like traffic navigation apps—routes calls based on rules, wait time, 
 This is the core decision-making logic that determines where to send the call. It considers multiple inputs and applies business rules.
 
 ##### Capabilities:
-Skill-based routing
-Priority-based routing
-Time-of-day and location-based routing
-Language or region-specific routing
-Business hours and holiday routing
-AI/ML-based predictive routing (advanced)
+- Skill-based routing
+- Priority-based routing
+- Time-of-day and location-based routing
+- Language or region-specific routing
+- Business hours and holiday routing
+- AI/ML-based predictive routing (advanced)
 
 ##### Skills Matrix
 A configurable mapping of agent skills used by the routing engine to match customers with the best-suited agents.
