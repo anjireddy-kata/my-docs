@@ -462,6 +462,8 @@ Delivers voice via SIP + RTP (media).
 
 Highly scalable and cost-effective.
 
+
+
 Terminates on an SBC (Session Border Controller) or VoIP gateway.
 
 nd-to-End Flow: Sofia Calls the Bank's TFN
