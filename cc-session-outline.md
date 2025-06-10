@@ -345,4 +345,37 @@ ACD decides routing based on skills, business rules, agent availability.
 SBC provides security, normalization, NAT traversal, and interop.
 
 CRM holds customer history, which is fetched in real-time for agent assistance.
+![image](https://github.com/user-attachments/assets/65c4e4c3-8d4c-41af-8d5d-4c3a572dd79d)
+
+In the telephony world, a carrier (also called a telecom carrier or service provider) is the company or organization that owns and operates the infrastructure needed to carry voice and data communications over long distances.
+
+✅ In Simple Terms:
+A carrier is like the highway system for phone calls—they move your call from your phone to its destination across networks they control.
+
+🔧 What Carriers Do:
+Provide phone numbers (including toll-free and mobile numbers)
+
+Route and connect calls over PSTN, VoIP, or mobile networks
+
+Manage protocols like SS7, SIP, and RTP
+
+Handle interconnects with other carriers globally
+
+Offer services like SIP trunking, PRI lines, SMS, and data plans
+
+🧱 Examples of Carriers:
+In the U.S.: AT&T, Verizon, T-Mobile
+
+In India: Airtel, Jio, BSNL
+
+Global / Enterprise Carriers: Tata Communications, Twilio, Bandwidth, BT, Orange, NTT
+
+🔄 In a Contact Center Scenario:
+When a customer dials a toll-free number:
+
+The call goes to the carrier network.
+
+The carrier routes it to the business’s contact center over SIP trunks or PSTN lines.
+
+The carrier may perform TFN translation, load balancing, or failover routing.
 
