@@ -333,3 +333,16 @@ Analytics platforms
 Quality Monitoring
 
 WFM (Workforce Management) for adherence metrics
+
+![image](https://github.com/user-attachments/assets/bb17b788-69c7-44a5-8022-782f7ff29cca)
+
+SIP/RTP protocols are used for voice call setup and audio delivery.
+
+CTI enables context sharing, screen pop, and routing intelligence.
+
+ACD decides routing based on skills, business rules, agent availability.
+
+SBC provides security, normalization, NAT traversal, and interop.
+
+CRM holds customer history, which is fetched in real-time for agent assistance.
+
