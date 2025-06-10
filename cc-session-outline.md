@@ -133,5 +133,9 @@ A carrier is like the highway system for phone calls—they move your call from 
 
 ## Step-by-Step Call Flow: From Customer to ACD
 #### Customer Initiates a Call
+Device: Sofia uses a mobile or landline phone.
+Network: Her call enters the Public Switched Telephone Network (PSTN) or VoIP network.
+##### SS7 (Signaling System 7) – PSTN signaling
+##### SIP (Session Initiation Protocol) – for VoIP-based calls
 
 
