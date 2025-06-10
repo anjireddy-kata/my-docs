@@ -149,3 +149,187 @@ Key Components:
 - Toll-Free Routing Database
 - Carrier Gateway (e.g., SIP trunking, PRI)
 
+#### Entry to Enterprise Telephony Infrastructure
+The call lands at the contact center’s edge telephony system, typically hosted on-premise or in the cloud.
+##### Key Components:
+- SBC (Session Border Controller): Secures and normalizes VoIP calls.
+- IP-PBX or Voice Gateway: Converts analog/digital to IP (for VoIP) or routes SIP directly.
+- IVR Platform: Plays the welcome prompt and gathers input.
+- Call Control Platform: Initiates a session for the call.
+
+##### Protocols:
+- SIP: Session setup, modification, and teardown
+- RTP: Real-Time Protocol for transmitting the actual voice
+- DTMF: For keypress tones during IVR interaction
+
+#### CTI (Computer Telephony Integration) Activation
+A CTI Server listens for incoming call events from the PBX or telephony platform.
+It triggers screen-pop actions in the agent desktop, even before call routing completes.
+
+##### Key CTI Protocols:
+- CSTA (Computer Supported Telecommunications Applications)
+- TSAPI (Telephony Services API)
+- JTAPI (Java Telephony API)
+- Proprietary APIs from Avaya, Cisco, Genesys, etc.
+
+#### IVR Interaction Begins
+The IVR plays messages and may ask Sofia to:
+- Press keys (DTMF)
+- Speak (Voice Recognition/ASR)
+- Inputs are used to:
+
+Authenticate the customer
+Capture intent (e.g., “lost card”, “account balance”)
+Pass context to ACD
+
+Key Technologies:
+
+- ASR (Automatic Speech Recognition)
+- TTS (Text-to-Speech)
+- VoiceXML for IVR logic
+
+#### Routing Decision Made by ACD
+Once the IVR completes its job:
+
+It invokes the ACD engine, passing:
+
+Caller ID
+
+Collected DTMF input
+
+CRM context (via CTI)
+
+Language preference, customer tier, etc.
+
+ACD evaluates:
+- Agent availability
+- Skill match
+- Queues
+- Routing rules
+
+✅ Protocols & Mechanisms:
+
+- SIP REFER / SIP RE-INVITE: To transfer to another endpoint
+- Routing APIs (e.g., REST-based if cloud ACD is used)
+- Queue Frameworks (with Redis/Kafka in modern ACD engines)
+
+Call Routed to Agent or Queue
+The ACD sends the call to:
+- A live agent via their softphone/deskphone
+- A queue if no one is available
+- Simultaneously, CTI updates the agent desktop with screen pop.
+
+✅ Voice Path:
+Call is bridged using SIP/RTP directly between customer and agent
+Or via media proxy (e.g., Genesys Media Server, Avaya Media Processor)
+
+![image](https://github.com/user-attachments/assets/3a8a2d34-96c4-4aeb-a021-461bd6df02ae)
+
+![image](https://github.com/user-attachments/assets/c54a10b4-cdcd-4f42-8482-7459dc359335)
+
+## Step-by-Step Breakdown: What Happens When You Call a Toll-Free Number (TFN)
+
+### Step 1: Call Initiation (From Mobile)
+You dial a TFN (e.g., 1800-123-4567) on your mobile.
+Your mobile phone converts the keypresses into outbound call signaling using protocols like ISUP (ISDN User Part) or SIP (if you're using VoLTE).
+📡 Your phone sends a "call setup" request to your Mobile Network Operator (MNO) (e.g., Jio, Airtel).
+
+### Step 2: Toll-Free Resolution (Carrier-Level)
+The TFN isn’t tied to a fixed location—it must be resolved. The carrier consults a Toll-Free Number Database (TFN Registry or IN - Intelligent Network) to determine the routing translation:
+Which enterprise owns the number?
+What is the destination number or SIP trunk?
+Are there time-of-day or geographic routing rules?
+
+🧠 Example:
+TFN 1800-123-4567 → Resolved to SIP Trunk IP: sip:bank@xyz.sbc.com
+
+### Step 3: Routing to Enterprise Entry Point
+Once the TFN is resolved:
+The call is routed through:
+PSTN (Public Switched Telephone Network), or
+VoIP SIP Trunks (if enterprise supports SIP)
+The call lands at the enterprise Session Border Controller (SBC).
+
+ Protocols Involved:
+
+- SS7 / ISUP if via traditional TDM circuits
+- SIP (Session Initiation Protocol) if over IP
+- RTP (Real-Time Protocol) for audio transmission
+
+### Step 4: Security & Media Negotiation (SBC)
+The SBC (e.g., Oracle, Ribbon, AudioCodes):
+- Verifies the call is legitimate (authentication, encryption)
+- Converts and normalizes the SIP signaling
+- Initiates NAT traversal and media codec negotiation
+
+🔐 SBCs also guard against DoS, fraud, malformed SIP, and codec mismatches.
+### Step 5: Entry to Voice Gateway or IP-PBX
+The SBC passes the call to an internal voice gateway (e.g., Cisco CUBE, Avaya Media Gateway) or IP-PBX (if legacy infra exists).
+
+It’s here that the call legs are bridged into the contact center environment.
+
+🔁 In hybrid setups, TDM calls may convert to SIP and vice versa.
+
+### Step 6: Contact Center IVR Engagement
+The call reaches the IVR platform (e.g., Genesys GVP, Cisco CVP, Avaya Experience Portal).
+
+The IVR plays welcome prompts like:
+
+"Welcome to XYZ Bank. Press 1 for account info, 2 for credit card services..."
+
+The system may:
+- Use ASR (Automatic Speech Recognition) for speech input
+- Capture DTMF tones from your keypad
+- Use TTS (Text to Speech) to dynamically respond
+
+🤖 The IVR is powered by VoiceXML logic, integrated with backend systems (e.g., for account lookup).
+
+### Step 7: CTI Integration Begins
+As soon as the call hits IVR, CTI (Computer Telephony Integration) kicks in:
+
+The IVR shares call metadata (caller ID, inputs, ANI) with the CTI server (e.g., Genesys T-Server).
+
+The CTI server fetches context from CRM systems (customer profile, past issues).
+
+🖥️ This allows screen pop to be ready for the agent even before the call lands.
+
+### Step 8: Call Routing via ACD
+The IVR sends a routing request to the ACD (Automatic Call Distributor):
+
+Includes metadata like intent, language, priority, CRM ID
+
+The ACD uses routing strategies to determine:
+- Which queue the call should go to
+- Which agent has the right skills and availability
+
+🧠 Routing logic may use: Skill-based routing, priority queuing, predictive algorithms
+
+### Step 9: Call Connected to Agent
+The ACD directs the call:
+
+To a live agent’s softphone
+
+Or into a queue if no agent is available
+
+The RTP stream now connects Sofia (you) to the agent.
+
+The agent desktop receives a screen pop with relevant info.
+
+🔹 Step 10: Post-Call Processing
+Once the call ends:
+
+The contact center updates:
+
+Interaction history in CRM
+
+Call metadata in reporting systems
+
+Recordings and transcripts (if enabled)
+
+The session flows into:
+
+Analytics platforms
+
+Quality Monitoring
+
+WFM (Workforce Management) for adherence metrics
