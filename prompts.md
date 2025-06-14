@@ -142,9 +142,6 @@ Actionable Recommendations – Practical steps for improvement based on experien
 
 Output Format (Per Dimension):
 
-markdown
-Copy
-Edit
 ## [Dimension Name]
 
 **Goal:**  
